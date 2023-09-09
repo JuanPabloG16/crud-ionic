@@ -1,0 +1,18 @@
+// Configuración del tema principal (modo claro)
+:root {
+    --ion-background-color: #ffffff;
+    --ion-text-color: #333333;
+    // Otros estilos para el modo claro
+  }
+  
+  // Configuración del tema de modo oscuro
+  .dark {
+    --ion-background-color: #121212;
+    --ion-text-color: #ffffff;
+    // Otros estilos para el modo oscuro
+  }
+
+.custom-button {
+    border-radius: 10px; /* Redondea las esquinas */
+    /* Agrega otros estilos según tus preferencias */
+  }
