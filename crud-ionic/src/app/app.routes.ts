@@ -9,5 +9,9 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
+  },  {
+    path: 'modal-agregar',
+    loadComponent: () => import('./modal-agregar/modal-agregar.page').then( m => m.ModalAgregarPage)
   },
+
 ];

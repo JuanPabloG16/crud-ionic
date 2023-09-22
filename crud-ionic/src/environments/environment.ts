@@ -3,13 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  urlGetList:'http://localhost:8080/api/users',
-  urlGetDetail:'http://localhost:8080/api/users/1',
-  urlPostNew:'http://localhost:8080/api/users',
-  urlPutUpdate:'http://localhost:8080/api/users/2',
-  urlDelDelete:'http://localhost:8080/api/users/2'
-};
+    production: false,
+    urlGetList:'http://localhost:8080/api/users',
+    urlGetDetail:'http://localhost:8080/api/users/1'
+  };
 
 /*
  * For easier debugging in development mode, you can import the following file

@@ -1,28 +1,4 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="primary" class="dark">
-    <ion-title>Buscar Personas</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true" class="dark">
-  <ion-searchbar
-    placeholder="Buscar personas"
-    color="primary"
-    class="dark"
-  ></ion-searchbar>
-
-  <ion-list>
-    <ion-item lines="full">
-      <ion-avatar slot="start">
-        <img [src]="" />
-      </ion-avatar>
-      <ion-label>
-        <h2>Persona</h2>
-      </ion-label>
-      <ion-buttons slot="end">
-        <ion-button color="success" class="dark custom-button">Editar</ion-button>
-        <ion-button color="danger" class="dark custom-button">Eliminar</ion-button>
-      </ion-buttons>
-    </ion-item>
-  </ion-list>
-</ion-content>
+<ion-app>
+    <ion-router-outlet></ion-router-outlet>
+  </ion-app>
+  

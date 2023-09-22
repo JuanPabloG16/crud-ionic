@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agregar usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Nombre</ion-label>
+    <ion-input type="text" placeholder="Ingresa el nombre" [(ngModel)]="name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Nombre de usuario</ion-label>
+    <ion-input type="text" placeholder="Ingresa el nombre de usuario" [(ngModel)]="user" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Rol</ion-label>
+    <ion-input type="text" placeholder="Ingresa el rol" [(ngModel)]="rol"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Contraseña</ion-label>
+    <ion-input type="password" placeholder="Ingresa la contraseña" [(ngModel)]="pass"></ion-input>
+  </ion-item>
+
+  <div style="margin-top:20px;">
+    <ion-button expand="full" (click)="createUser()">Agregar</ion-button>
+    <ion-button expand="full" fill="outline" (click)="volver()">Atrás</ion-button>
+  </div>
+</ion-content>
