@@ -20,6 +20,11 @@
     <ion-input type="text" [(ngModel)]="user.rol" placeholder="Editar el rol"></ion-input>
   </ion-item>
 
+  <ion-item>
+    <ion-label>Pass</ion-label>
+    <ion-input type="text" [(ngModel)]="user.password" placeholder="Editar el pass"></ion-input>
+  </ion-item>
+
   <div style="margin-top:20px;">
     <ion-button expand="full" (click)="updateUser()">Agregar</ion-button>
 

@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule, ModalController } from '@ionic/angular';
 import { peopleService } from '../service/people.service';
 import { Users } from '../models/People.model';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -12,7 +14,8 @@ import { Users } from '../models/People.model';
   templateUrl: './modal-editar.page.html',
   styleUrls: ['./modal-editar.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  imports: [IonicModule, CommonModule, FormsModule,HttpClientModule],
+  providers: [peopleService]
 })
 export class ModalEditarPage implements OnInit {
   
