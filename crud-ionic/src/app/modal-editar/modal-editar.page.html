@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agregar usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="user.names" placeholder="Editar el nombre"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Nombre de usuario</ion-label>
+    <ion-input type="text" [(ngModel)]="user.username" placeholder="Editar nombre de usuario"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Rol</ion-label>
+    <ion-input type="text" [(ngModel)]="user.rol" placeholder="Editar el rol"></ion-input>
+  </ion-item>
+
+  <div style="margin-top:20px;">
+    <ion-button expand="full" (click)="updateUser()">Agregar</ion-button>
+
+    <ion-button expand="full" fill="outline" (click)="volver()">Atrás</ion-button>
+  </div>
+</ion-content>

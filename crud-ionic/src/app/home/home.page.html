@@ -21,8 +21,8 @@
         <h2>{{ person.names }}</h2>
       </ion-label>
       <ion-buttons slot="end">
-        <ion-button color="success" class="dark custom-button">Editar</ion-button>
-        <ion-button color="danger" class="dark custom-button">Eliminar</ion-button>
+        <ion-button color="success" class="dark custom-button" (click)="editUser(person)">Editar</ion-button>
+        <ion-button color="danger" class="dark custom-button" (click)="deleteUser(person.id)">Eliminar</ion-button>
       </ion-buttons>
     </ion-item>
   </ion-list>

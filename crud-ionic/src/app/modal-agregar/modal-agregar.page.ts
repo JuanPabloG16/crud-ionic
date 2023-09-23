@@ -31,7 +31,7 @@ export class ModalAgregarPage implements OnInit {
   //crear usuario
   createUser(){
     const user: Users = {
-      id: 5, // ** Como hago con el id ?
+      id: 5, 
       names: this.name,
       username: this.user,
       password: this.pass,

@@ -6,6 +6,7 @@ import { Users } from '../models/People.model';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ModalAgregarPage } from '../modal-agregar/modal-agregar.page';
+import { ModalEditarPage } from '../modal-editar/modal-editar.page';
 
 
 @Component({
@@ -54,5 +55,40 @@ export class HomePage implements OnInit {
 
   await modal.present();
   }
+
+  //eliminar ususario
+  async deleteUser(id: number) {
+    try {
+      await this.peopleService.deleteUser(id).toPromise();
+      this.people = this.people.filter(person => person.id !== id);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  //edit usuario 
+
+  async editUser(user: Users) {
+
+    //modal
+    const modal = await this.modalController.create({
+      component: ModalEditarPage,
+      componentProps: {
+        user: user,
+      },
+    });
+  
+    modal.onDidDismiss().then((data) => {
+      if (data.data) {
+        this.peopleService.updateUser(data.data).subscribe((updatedUser) => {
+          this.people = this.people.map((person) =>
+            person.id === updatedUser.id ? updatedUser : person
+          );
+        });
+      }
+    });
+  
+    await modal.present();
+  }
+  
 
 }

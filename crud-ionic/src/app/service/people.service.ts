@@ -34,4 +34,22 @@ insertUser(user:Users): Observable<ResponseUsers>{
   });
 }
 
+//eliminar persona
+deleteUser(id: number): Observable<any> {
+  return this.http.delete(`${environment.urlGetList}/${id}`, {
+    headers: {
+      'code-app': '2022*01',
+    },
+  });
+}
+
+//editar persona
+updateUser(user: Users): Observable<Users> {
+  return this.http.put<Users>(`${environment.urlGetList}/${user.id}`, user, {
+    headers: {
+      'code-app': '2022*01',
+    },
+  });
+}
+
 }
